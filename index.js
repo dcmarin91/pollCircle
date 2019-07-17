@@ -5,8 +5,7 @@ const Poll = require("./models/Poll");
 const bcrypt = require('bcrypt');
 const cookieSession = require("cookie-session");
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://127.0.0.1:27017/polls_top", { useNewUrlParser: true });
-
+mongoose.connect(process.env.MONGOLAB_CRIMSON_URI || "mongodb://127.0.0.1:27017/polls_top", { useNewUrlParser: true });
 const app = express();
 
 app.set('view engine', 'pug');
